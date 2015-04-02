@@ -18,39 +18,24 @@ public class Vuurwerk {
         
     }
 
-    
     public Vuurwerk(String naam, double prijs, Instructie instructie) {
         this.naam = naam;
         this.prijs = prijs;
         this.instructie = instructie;
     }
-
-    public String getNaam() {
-        return naam;
-    }
-
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
-
-    public double getPrijs() {
-        return prijs;
-    }
-
-    public void setPrijs(double prijs) {
-        this.prijs = prijs;
-    }
-
+ 
+    // Ik heb deze methode geschreven om een instructie terug te krijgen
+    // zo kan ik testen in isLegaal of Vuurwerk een instructie heeft 
     public Instructie getInstructie() {
         return instructie;
     }
-
-    public void setInstructie(Instructie instructie) {
-        this.instructie = instructie;
-    }
     
     public boolean isLegaal() {
-       return false;
+       //if Vuurwerk has Instructie & Instructie is NL return true
+       //else return false
+        return (getInstructie() != null) && instructie.isNederlandstalig();
+        // met instance of heb je geen extra methode nodig
+        // return instructie instanceof Instructie && instructie.isNederlandstalig();
     }
     
     /**
@@ -59,7 +44,16 @@ public class Vuurwerk {
      */
     @Override
     public String toString() {
-        return "";
+        System.out.println("Naam: " + this.naam);
         
+        String temp;
+        if (getInstructie() == null) {
+            temp = "Ontbreekt";
+        } else {
+            temp = this.instructie.toString();
+        }
+        
+        return " Instructie: " + temp + "\n Prijs: \u20AC" + this.prijs +
+                "\n Legaal: " + this.isLegaal();
     }
 }

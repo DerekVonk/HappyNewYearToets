@@ -28,9 +28,7 @@ public class Knaller extends Vuurwerk {
         this.aantalKnallen = aantalKnallen;
         this.decibel = decibel;
     }
-    
-    
-    
+
     /**
      * Method to check of instance of Knaller is legal
      * @return boolean - true is legal, false is illegal

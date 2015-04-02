@@ -22,7 +22,7 @@ public class Instructie {
         this.leeftijd = leeftijd;
         this.omschrijving = omschrijving;
     }
-
+    
     public int getLeeftijd() {
         return leeftijd;
     }

@@ -4,6 +4,7 @@ import GUI.HappyNewYearJFrame;
 
 import java.util.ArrayList;
 import javax.swing.JFrame;
+import models.Instructie;
 
 import models.Vuurwerk;
 
@@ -16,7 +17,7 @@ public class HappyNewYearDriver {
      */
     public static void main(String[] args) {
 
-        System.out.println("Happy new year from: Peter");
+        System.out.println("Happy new year from: Derek Vonk  500704534 - IDI101!");
 
         stap1();
 
@@ -29,7 +30,7 @@ public class HappyNewYearDriver {
     }
 
     private static void stap1() {
-/*
+
         System.out.println("\n--- STAP 1 ---");
 
         Vuurwerk vuurwerk;
@@ -47,7 +48,7 @@ public class HappyNewYearDriver {
         // vuurwerk zonder instructie
         vuurwerk = new Vuurwerk("Aansteeklont zonder instructie", 0.25, null);
         System.out.println(vuurwerk);
-*/
+
     }
 
     private static void stap2() {
