@@ -2,6 +2,7 @@ package GUI;
 
 import java.util.ArrayList;
 import models.Vuurwerk;
+import javax.swing.JComboBox;
 
 public class HappyNewYearJFrame extends javax.swing.JFrame {
 
@@ -86,7 +87,12 @@ public class HappyNewYearJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBoxPakketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPakketActionPerformed
-	    // code voor stap 5
+	// var i bewaart selected value integer van JComboBox       
+        Integer i = jComboBoxPakket.getSelectedIndex();
+        // in de lijst van vuurwerk Pakket zoek ik welk vuurwerk dat is
+               Vuurwerk vw = pakket.get(i);
+               //
+               jTextAreaInstructie.setText(vw.getInstructie().toString());
     }//GEN-LAST:event_jComboBoxPakketActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import models.Instructie;
 import models.Knaller;
+import models.Vuurpijl;
 
 import models.Vuurwerk;
 
@@ -27,7 +28,7 @@ public class HappyNewYearDriver {
         stap3();
         
         //Now some coding for a GUI
-//        paintGUI(pakket);
+        paintGUI(pakket);
     }
 
     private static void stap1() {
@@ -80,7 +81,7 @@ public class HappyNewYearDriver {
     }
 
     private static void stap3() {
-/*
+
         System.out.println("\n--- STAP 3 ---");
 
         Vuurpijl vuurpijl;
@@ -89,21 +90,42 @@ public class HappyNewYearDriver {
         vuurpijl = new Vuurpijl(40, new int[]{50, 25, 25}, "Cruise Rocket", 2.50,
                 new Instructie(true, 10, "Niet in de hand houden"));
         System.out.println(vuurpijl);
+        pakket.add(vuurpijl);
 
         // vuurpijl met Nederlandstalige instructie, incorrecte kleurverhouding, leeftijd 16
         vuurpijl = new Vuurpijl(40, new int[]{25, 30, 44}, "Killing Arrow", 4.25,
                 new Instructie(true, 16, "Niet in de hand houden"));
         System.out.println(vuurpijl);
+        pakket.add(vuurpijl);
+
 
         // vuurpijl met Engelstalige instructie, incorrecte kleurverhouding, leeftijd 20
         vuurpijl = new Vuurpijl(40, new int[]{50, 41, 10}, "Magic Sky", 2.75,
                 new Instructie(false, 20, "Keep minimum 10 ft distance"));
         System.out.println(vuurpijl);
+        pakket.add(vuurpijl);
+
 
         // vuurpijl zonder instructie, correcte kleurverhouding
         vuurpijl = new Vuurpijl(40, new int[]{50, 50, 0}, "Golden Sky", 3.25, null);
         System.out.println(vuurpijl);
-*/
+        pakket.add(vuurpijl);
+        
+        toonVuurwerk(pakket);
+
+        
+    }
+    
+    
+    
+    public static void toonVuurwerk (ArrayList<Vuurwerk> pakket) {
+        
+        double totaalPrijs = 0;
+        for (Vuurwerk vuurwerk : pakket) {
+            System.out.println(vuurwerk.toString());
+            totaalPrijs += vuurwerk.getPrijs();
+            }
+        System.out.println("Totaalprijs is: " + totaalPrijs);
     }
 
     public static void paintGUI(ArrayList<Vuurwerk> vuurwerkLijstje) {

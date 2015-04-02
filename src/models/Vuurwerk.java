@@ -11,12 +11,12 @@ public class Vuurwerk {
     private Instructie instructie;
     
     
-    /**
-     * Default Constructor
-     */
-    public Vuurwerk() {
-        
-    }
+//    /**
+//     * Default Constructor
+//     */
+//    public Vuurwerk() {
+//        
+//    }
 
     public Vuurwerk(String naam, double prijs, Instructie instructie) {
         this.naam = naam;

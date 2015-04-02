@@ -15,18 +15,16 @@ public class Knaller extends Vuurwerk {
     private int decibel;
     
     
-    /**
-     * Default Constructor
-     */
-    public Knaller() {
-        
-    }
-    
+//    /**
+//     * Default Constructor
+//     */
+//    public Knaller() {
+//        
+//    }
+//    
     public Knaller(int aantalKnallen, int decibel, String naam, double prijs, 
             Instructie instructie) {
-        this.getNaam();
-        this.getPrijs();
-        this.getInstructie();
+        super(naam, prijs, instructie);
         this.aantalKnallen = aantalKnallen;
         this.decibel = decibel;
     }
