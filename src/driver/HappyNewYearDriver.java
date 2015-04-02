@@ -5,12 +5,13 @@ import GUI.HappyNewYearJFrame;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import models.Instructie;
+import models.Knaller;
 
 import models.Vuurwerk;
 
 public class HappyNewYearDriver {
 
-    private static ArrayList<Vuurwerk> pakket = new ArrayList<Vuurwerk>();
+    private static ArrayList<Vuurwerk> pakket = new ArrayList<>();
 
     /**
      * @param args the command line arguments
@@ -52,7 +53,7 @@ public class HappyNewYearDriver {
     }
 
     private static void stap2() {
-/*
+
         System.out.println("\n--- STAP 2 ---");
 
         Knaller knaller;
@@ -75,7 +76,7 @@ public class HappyNewYearDriver {
         // knaller zonder instructie en 100 decibel
         knaller = new Knaller(1000, 100, "Hongkong Rol", 82.5, null);
         System.out.println(knaller);
-*/
+
     }
 
     private static void stap3() {

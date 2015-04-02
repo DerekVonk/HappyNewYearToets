@@ -23,7 +23,16 @@ public class Vuurwerk {
         this.prijs = prijs;
         this.instructie = instructie;
     }
+
+    public String getNaam() {
+        return naam;
+    }
+
+    public double getPrijs() {
+        return prijs;
+    }
  
+    
     // Ik heb deze methode geschreven om een instructie terug te krijgen
     // zo kan ik testen in isLegaal of Vuurwerk een instructie heeft 
     public Instructie getInstructie() {
@@ -40,20 +49,21 @@ public class Vuurwerk {
     
     /**
      * Returns a String representation of Vuurwerk
-     * @return String - Discription of Vuurwerk
+     * @return String - Description of Vuurwerk
      */
     @Override
     public String toString() {
-        System.out.println("Naam: " + this.naam);
+        System.out.println("Naam: " + getNaam());
         
+        //if Vuurwerk has no instructie, print "ontbreekt"
         String temp;
         if (getInstructie() == null) {
             temp = "Ontbreekt";
         } else {
-            temp = this.instructie.toString();
+            temp = getInstructie().toString();
         }
         
-        return " Instructie: " + temp + "\n Prijs: \u20AC" + this.prijs +
+        return " Instructie: " + temp + "\n Prijs: \u20AC" + getPrijs() +
                 "\n Legaal: " + this.isLegaal();
     }
 }

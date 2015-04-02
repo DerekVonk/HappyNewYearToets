@@ -24,7 +24,9 @@ public class Knaller extends Vuurwerk {
     
     public Knaller(int aantalKnallen, int decibel, String naam, double prijs, 
             Instructie instructie) {
-        super();
+        this.getNaam();
+        this.getPrijs();
+        this.getInstructie();
         this.aantalKnallen = aantalKnallen;
         this.decibel = decibel;
     }
@@ -35,7 +37,7 @@ public class Knaller extends Vuurwerk {
      */
     @Override
     public boolean isLegaal() {
-        return false;
+        return decibel < 120;
     }
     
     /**
@@ -44,7 +46,8 @@ public class Knaller extends Vuurwerk {
      */
     @Override
     public String toString() {
-        return "";
+        return super.toString() + "\n aantalKnallen: " + this.aantalKnallen +
+                "\n decibel: " + this.decibel;
     }
 }
 
